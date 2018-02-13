@@ -1,0 +1,5 @@
+#!/bin/sh
+
+/bin/echo -e '\nExecuting update_script...\n' >> /var/log/update_script.log
+apt-get update >> /var/log/update_script.log 2>&1
+apt-get upgrade >> /var/log/update_script.log 2>&1
