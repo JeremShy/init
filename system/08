@@ -1,0 +1,6 @@
+Il s'agit du fichier :
+
+$HOME/.ssh/authorized_keys
+
+donc pour root par exemple :
+/root/.ssh/authorized_keys
