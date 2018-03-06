@@ -1,0 +1,8 @@
+#!/bin/sh
+
+if [ $# -ne 1 ]
+then
+	echo "Please supply exactly 1 argument."
+else
+	ls -S $1 
+fi

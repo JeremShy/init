@@ -1,0 +1,19 @@
+#!/bin/bash
+
+MD5FILE=".md5sum"
+
+if [ ! -f $MD5FILE ]
+then
+	md5sum /etc/crontab > $MD5FILE
+	exit
+fi
+
+if md5sum -c $MD5FILE > /dev/null 2>&1
+then
+	echo "No modification."
+else
+	echo "Modified ! Sending a mail to root."
+	echo "The /etc/crontab file has been modified !" | mail -s "crontab modification" root
+fi
+
+md5sum /etc/crontab > $MD5FILE

@@ -1,1 +1,1 @@
-service sshd status  | grep PID | sed -e 's/^.*: //; s/ .*//'
+service sshd status  | grep "Main PID" | sed -e 's/^.*: //; s/ .*//'
